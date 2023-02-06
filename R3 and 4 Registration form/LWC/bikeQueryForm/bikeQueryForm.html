@@ -1,0 +1,73 @@
+<template>
+    <template if:true={isGuestUser}>
+        <lightning-modal-header label='Contact Form'></lightning-modal-header>
+
+        <lightning-modal-body>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label" for="form-element-01">First Name</label>
+            <div class="slds-form-element__control ">
+                <input type="text" id="form-element-01" placeholder="first Name" class="slds-input input-element" 
+                value={firstName} onchange={handleFirstNameChange} required />
+            </div>
+          </div>
+          <!-- --------------------------------------------------------------------------------------------------------- -->
+
+          <div class="slds-form-element">
+            <label class="slds-form-element__label" for="form-element-01">Last Name</label>
+            <div class="slds-form-element__control ">
+                <input type="text" id="form-element-02" placeholder="last name" class="slds-input input-element" 
+                value={lastName} onchange={handleLastNameChange} required />
+            </div>
+          </div>
+
+ <!-- --------------------------------------------------------------------------------------------------------- -->
+          <div class="slds-form-element">
+            <label class="slds-form-element__label" for="form-element-01">Email</label>
+            <div class="slds-form-element__control">
+              <input type="text" id="form-element-03" placeholder="email" class="slds-input input-element" 
+              value={email} onchange={handleEmailChange} required/>
+            </div>
+          </div>
+ <!-- --------------------------------------------------------------------------------------------------------- -->
+          <div class="slds-form-element">
+            <label class="slds-form-element__label" for="form-element-01">Company Name</label>
+            <div class="slds-form-element__control">
+              <input type="text" id="form-element-04" placeholder="Company name" class="slds-input input-element"
+              value={companyName} onchange={handleCompanyNameChange} required />
+            </div>
+          </div>
+ <!-- --------------------------------------------------------------------------------------------------------- -->
+         <div class="slds-form-element">
+           <label class="slds-form-element__label" for="form-element-01">Comment</label>
+             <div class="slds-form-element__control">
+              <input type="text" id="form-element-05" placeholder="comment" class="slds-input input-element"
+                value={comment} onchange={handleComment} required />
+             </div>
+         </div>
+        </lightning-modal-body>
+    <lightning-modal-footer>
+        <div >
+            <lightning-button variant="Success" label="Submit" onclick={handleSubmitLead} class="slds-m-left_x-small">  
+            </lightning-button>
+        </div>
+    </lightning-modal-footer>
+</template>
+    <template if:false={isGuestUser}>
+        <lightning-modal-header label='Contact Form'></lightning-modal-header>
+        <lightning-modal-body>
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="form-element-01">Comment</label>
+                  <div class="slds-form-element__control">
+                   <input type="text" id="form-element-06" placeholder="comment" class="slds-input input-element"
+                     value={comment} onchange={handleComment} required />
+                  </div>
+              </div>
+        </lightning-modal-body>
+        <lightning-modal-footer>
+            <div >
+                <lightning-button variant="Success" label="Submit" onclick={handleSubmitCase} class="slds-m-left_x-small">  
+                </lightning-button>
+            </div>
+        </lightning-modal-footer>
+    </template>
+</template>

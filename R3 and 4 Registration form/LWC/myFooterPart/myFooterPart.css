@@ -1,0 +1,101 @@
+.footer {
+
+   
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+   
+
+    height: auto;
+
+    width: 100vw;
+
+    padding-top: 40px;
+
+    color: #fff;
+
+}
+
+
+
+.footer-content {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+}
+
+.footer-content p{
+
+    max-width: 500px;
+
+    margin: 10px auto;
+
+    line-height: 28px;
+
+    font-size: 10px;
+
+    color: #010914;
+
+}
+.socials {
+
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 1rem 0 3rem 0;
+
+}
+.c-container{
+    background-color: white;
+    padding: 1rem;
+    font-size: 1rem;
+}
+h6{
+    color: skyblue;
+}
+p,a{
+    color: #fff;
+}
+.text-justify{
+    padding: 0.8rem 1.2rem 0px 0px;
+}
+.text-justify:first-letter{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+.img-con {
+    display: flex;
+    flex-direction: column;
+}
+.validateBtn{
+    margin-top: 0.8rem;
+    --sds-c-button-brand-color-background: #d01f25;
+    --slds-c-button-brand-color-background-hover:#3c1416;;
+    --slds-c-button-brand-color-border:#d01f25;
+    --slds-c-button-brand-color-border-hover:#d01f25;
+    --slds-c-button-radius-border:2px;
+}
+.copyright-text{
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    opacity: .25;
+}
